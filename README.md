@@ -73,6 +73,16 @@ python -m app.daily_briefing
 APP_ENV="production" COUNTRY_CODE="US" ZIP_CODE="20057" python -m app.daily_briefing
 ```
 
+### Running the Web App
+
+```sh
+# mac:
+FLASK_APP=web_app flask run
+
+# windows:
+export FLASK_APP=web_app
+flask run
+```
 
 ## Testing
 
@@ -83,21 +93,6 @@ pytest
 
 # in CI mode:
 CI=true pytest
-```
-
-### Running the Web App
-
-We can now delete the original "hello.py" file.
-
-Since we moved the Flask app into the "web_app" directory, we'll use this new command to run it moving forward:
-
-```sh
-# mac:
-FLASK_APP=web_app flask run
-
-# windows:
-export FLASK_APP=web_app
-flask run
 ```
 
 ## [Deploying](/DEPLOYING.md)
